@@ -55,17 +55,7 @@ router.put('/:id', async (req, res) => {
         todo.done = done;
 
         const todoReturned = await todo.save();
-        console.log(todoReturned);
-        
-
-        /*const todoUpdated = {
-            title,
-            description,
-            done
-        }
-
-        const todoReturned = await ToDo.findByIdAndUpdate(req.params.id, todoUpdated, {new: true});
-        */
+    
         return res.json(todoReturned);
     } catch (error) {
         console.log(error);
@@ -80,7 +70,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async(req, res) => {
     try {
         await ToDo.findByIdAndDelete(req.params.id);
-        return res.json({ msg: 'Postagem removida com sucesso' });
+        return res.json({ msg: 'TO-DO removido com sucesso' });
     } catch (error) {
         console.error(error);
         return res.json({ error: error.message });

@@ -3,11 +3,14 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+
 const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+
+//Database config
 const connectDB = async () => {
     try {
         await mongoose.connect('mongodb+srv://ramon742:zxc123@personalprojects.hhiuu.mongodb.net/to-do?retryWrites=true&w=majority', {

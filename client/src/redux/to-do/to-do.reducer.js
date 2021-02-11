@@ -7,8 +7,7 @@ import {
   
   const initialState = {
     todos: [],
-    todo: null,
-    loading: true
+    todo: null
   };
   
   const todoReducer = (state = initialState, action) => {
@@ -18,26 +17,22 @@ import {
       case GET_TODOS:
         return {
           ...state,
-          todos: payload,
-          loading: false
+          todos: payload
         };
       case GET_TODO:
         return {
           ...state,
-          todo: payload,
-          loading: false
+          todo: payload
         };
       case ADD_TODO:
         return {
           ...state,
-          todos: [payload, ...state.todos],
-          loading: false
+          todos: [payload, ...state.todos]
         };
       case REMOVE_TODO:
         return {
           ...state,
-          todos: state.todos.filter(todo => todo._id !== payload),
-          loading: false
+          todos: state.todos.filter(todo => todo._id !== payload)
         };
       default:
         return state;

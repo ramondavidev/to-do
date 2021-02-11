@@ -49,7 +49,6 @@ export const addToDo = ( title, description, done ) => async dispatch => {
 export const editToDo = ( form ) => async dispatch => {
   const { title, description, done, id } = form;
   try {
-    console.log(title, description, done, id);
     await api.put(`/${id}`, { title, description, done});
     const res = await api.get('/');
     dispatch({
