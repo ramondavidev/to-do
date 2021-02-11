@@ -1,0 +1,56 @@
+.todo-card {
+    background-color: #f0f0f0 ;
+    height: 60px;
+    max-width: 850px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+        font-weight: 700;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+    .description {
+        text-align: left;
+        font-size: 1.1rem;
+    }
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.6;
+    
+}
+
+.icons-container {
+    .icon-check {
+        color: #5efc03;
+        cursor: pointer;
+        &:hover {
+            color: #3ba100;
+        }
+    }
+    .icon-edit {
+        color: rgb(93, 194, 194);
+        cursor: pointer;
+        margin: 0 10px;
+        &:hover {
+            color: rgb(53, 126, 126);
+        }
+    }
+    .icon-remove {
+        color: rgb(243, 70, 104);
+        cursor: pointer;
+        &:hover {
+            color: rgb(156, 44, 67);
+        }
+    }
+
+    .icon-back {
+        color: blue;
+        cursor: pointer;
+    }
+}
